@@ -1,72 +1,62 @@
 # CatUserbot
-A simple Telegram userbot based on Telethon .
+Um custom repo do catuserbot feito por Amintas.
 [![catuserbot logo](https://telegra.ph/file/b7dc845e3a48cde0d7bb1.jpg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fsandy1709%2Fcatuserbot%2Ftree%2Fbugs&template=https%3A%2F%2Fgithub.com%2Fsandy1709%2Fcatuserbot)
-![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2FJisan09%2Fcatuserbot)
-[![CodeFactor](https://www.codefactor.io/repository/github/Jisan09/catuserbot/badge?&style=flat-square)](https://www.codefactor.io/repository/github/Jisan09/catuserbot)
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green?&style=flat-square)](https://GitHub.com/Jisan09/catuserbot/graphs/commit-activity) 
-![Repo Size](https://img.shields.io/github/repo-size/Jisan09/catuserbot?&style=flat-square&logo=github)
-[![GitHub license](https://img.shields.io/github/license/Jisan09/catuserbot?&style=flat-square&logo=github)](https://github.com/Jisan09/catuserbot/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/Jisan09/catuserbot?&style=flat-square&logo=github)](https://github.com/Jisan09/catuserbot/issues)
-[![PR Open](https://img.shields.io/github/issues-pr/Jisan09/catuserbot?&style=flat-square&logo=github)](https://github.com/Jisan09/catuserbot/pulls)
-[![PR Closed](https://img.shields.io/github/issues-pr-closed/Jisan09/catuserbot?&style=flat-square&logo=github)](https://github.com/Jisan09/catuserbot/pulls?q=is:closed)
-[![GitHub contributors](https://img.shields.io/github/contributors/sandy1709/catuserbot?&style=flat-square&logo=github)](https://GitHub.com/sandy1709/catuserbot/graphs/contributors/)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Jisan09/catuserbot?&style=flat-square&logo=github)](https://github.com/Jisan09/catuserbot/graphs/commit-activity)
-[![GitHub forks](https://img.shields.io/github/forks/Jisan09/catuserbot?&style=flat-square&logo=github)](https://github.com/Jisan09/catuserbot/fork)
-[![GitHub stars](https://img.shields.io/github/stars/Jisan09/catuserbot?&style=flat-square&logo=github)](https://github.com/Jisan09/catuserbot/stargazers)
 
 
+## Como fazer o deploy do catuserbot
+### Heroku Deploy
+  - [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/AGMODDER/catpack)
 
-A simple Telegram userbot based on Telethon .
+<details>
+    <summary>Etapas para fazer o deploy! </summary>
 
-## How to deploy catuserbot
-### Self host
-
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FJisan7509%2Fcatpack)
-
-  <details>
-    <summary>Steps to deploy on Heroku !! </summary>
-
-  #### Get Required values First 
-
-  1) Get App Id and Api Hash from [HERE](https://my.telegram.org) 
-  2) Create a bot in [Bot Father](https://t.me/botfather) and get Bot Token
-  3) Then Generate stringsession from [Repl](https://generatestringsession.sandeep1709.repl.run/).
-
-
-  </details>
+  #### Primeiramente, pegue as vars necessárias.
   
-## Support
-   <a href="https://t.me/catuserbot17"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
-   <a href="https://t.me/catuserbot_support"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+  1) Crie uma conta no [Heroku](https://www.heroku.com) e coloque como linguagem principal o python.
+  2) Pegue seu Heroku API nas [configurações](https://dashboard.heroku.com/account)
+  3) Obtenha a Api Id e o Hash da API [AQUI](https://my.telegram.org/) para fazer a string e completar as vars
+  4) Crie um Bot no [botFather](https://t.me/botfather) e pegue o Bot Token
+  5) Em seguida, gere a STRING SESSION no [Repl](https://generatestringsession.sandeep1709.repl.run/)
+RECOMENDO USAR O PC OU EDGE MOBILE.
+  6) Coloque no Alive Name, o nome que irá aparecer no .alive, .revert e etc.
+  7) Coloque o appname, o mesmo que você colocou lá em cima (para fazer updates e etc)
+  8) Clique em deploy no botão acima, e coloque as vars nos seus respectivos lugares.
+ 
+
+Não mexa em mais nada.
+
+</details>
+
+### Fazer deploy localmente
+  - [Veja isso](https://catuserbot.gitbook.io/catuserbot/tutorial/self-host)
+  
+## Suporte
+   <a href="https://t.me/comunidadeg8"><img src="https://img.shields.io/badge/Grupo%20de%20Suporte%3F-Sim-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+   <a href="https://t.me/awtfg"><img src="https://img.shields.io/badge/Dev%20Suporte%3F-Sim-green?&style=flat-square?&logo=telegram" width=220px></a></p>
    
-## Inspiration
-   - [X-tra-Telegram](https://github.com/Dark-Princ3/X-tra-Telegram)
-   - [Uniborg](https://github.com/SpEcHiDe/UniBorg) & [Uniborg fork](https://github.com/ravana69/PornHub)
-   - [Nana-Remix](https://github.com/pokurt/Nana-Remix)
-   - [Userge-X](https://github.com/code-rgb/USERGE-X/)
-   
-## Disclaimer
+## AVISO
 
 ```
-              YOU ARE FOREWARNED
-Your Telegram account may get banned.   
-Catuserbot or we are not responsible for your account, 
-This bot is intended for the purpose of having fun with some fun commands 
-and group management with some helpfull commands.
+              VOCÊ ESTÁ AVISADO
+ Sua conta do Telegram pode ser banida.
+ Eu, Amintas, e Catuserbot não somos responsáveis ​​por sua conta,
+ Este bot tem o objetivo de se divertir com alguns comandos divertidos
+ e gerenciamento de grupo com alguns comandos úteis.
 
-If  you ended up spamming groups, getting reported left and right, 
-and you ended up in being fight with Telegram 
-and at the end Telegram Team deleted your account. DON'T BLAME US.
+ Se você acabou enviando spam para grupos, sendo denunciado a torto e a direito,
+ e você acabou arrumando uma briga com telegram
+ e no final a equipe do Telegram deletou sua conta.  NÃO NOS RESPONSABILIZE.
+ Eu estarei rolando no chão rindo de você.
+ Sim, você ouviu direito.
 
-No personal support will be provided / We won't spoon feed you. 
-If you need help ask in our support group 
-and we or our friends will try to help you.
+ Nenhum apoio pessoal será fornecido/não vamos te ajudar.
+ Se precisar de ajuda, pergunte em nosso grupo de suporte
+ e nós ou nossos amigos tentaremos ajudá-lo.
 
-Thanks for using our bot 😺
+ Obrigado por usar nosso bot 😺
+
 ```
 
-## Credits
-   - Special thanks to [LonamiWebs](https://github.com/LonamiWebs/Telethon/) for Telethon libraray
-   - To all devs of these [Userbots](https://github.com/sandy1709/catuserbot/tree/bugs#inspiration)
-   - Finally to all [contributors of Catuserbot](https://github.com/sandy1709/catuserbot/graphs/contributors)
+## Creditos
+   - Agradecimento especial para [catuserbot](https://github.com/sandy1709/catuserbot/) pelo Userbot.
+   - Agradecimento ao [Pascoal](https://t.me/intelhdgraphics) e [Otávio](https://t.me/intelathom1ghz) por ajudar a traduzir. 
