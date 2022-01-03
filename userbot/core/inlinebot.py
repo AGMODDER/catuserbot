@@ -53,29 +53,29 @@ def ibuild_keyboard(buttons):
 
 
 def main_menu():
-    text = f"𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𝗛𝗲𝗹𝗽𝗲𝗿\
-        \n𝗣𝗿𝗼𝘃𝗶𝗱𝗲𝗱 𝗯𝘆 {mention}"
+    text = f"𝗔𝗷𝘂𝗱𝗮 𝗱𝗼 𝗖𝗮𝘁𝘂𝘀𝗲𝗿𝗯𝗼𝘁
+        \n  𝗙𝗼𝗿𝗻𝗲𝗰𝗶𝗱𝗼 𝗽𝗼𝗿 : {mention}"
     buttons = [
-        (Button.inline("ℹ️ Info", data="check"),),
+        (Button.inline("ℹ️ Informações", data="check"),),
         (
             Button.inline(f"👮‍♂️ Admin ({len(GRP_INFO['admin'])})", data="admin_menu"),
             Button.inline(f"🤖 Bot ({len(GRP_INFO['bot'])})", data="bot_menu"),
         ),
         (
-            Button.inline(f"🎨 Fun ({len(GRP_INFO['fun'])})", data="fun_menu"),
+            Button.inline(f"🎨 Diversão ({len(GRP_INFO['fun'])})", data="fun_menu"),
             Button.inline(f"🧩 Misc ({len(GRP_INFO['misc'])})", data="misc_menu"),
         ),
         (
-            Button.inline(f"🧰 Tools ({len(GRP_INFO['tools'])})", data="tools_menu"),
+            Button.inline(f"🧰 Ferramentas ({len(GRP_INFO['tools'])})", data="tools_menu"),
             Button.inline(f"🗂 Utils ({len(GRP_INFO['utils'])})", data="utils_menu"),
         ),
         (
             Button.inline(f"➕ Extra ({len(GRP_INFO['extra'])})", data="extra_menu"),
             Button.inline(
-                f"⚰️ Useless ({len(GRP_INFO['useless'])})", data="useless_menu"
+                f"⚰️ Desnecessário ({len(GRP_INFO['useless'])})", data="useless_menu"
             ),
         ),
-        (Button.inline("🔒 Close Menu", data="close"),),
+        (Button.inline("🔒 Fechar Menu", data="close"),),
     ]
 
     return text, buttons
@@ -172,7 +172,7 @@ def paginate_help(
                 )
             ]
         else:
-            pairs = pairs + [(Button.inline("⚙️ Main Menu", data="mainmenu"),)]
+            pairs = pairs + [(Button.inline("⚙️ Menu Principal", data="mainmenu"),)]
     elif len(pairs) > number_of_rows:
         if category_pgno < 0:
             category_pgno = len(pairs) + category_pgno
@@ -185,7 +185,7 @@ def paginate_help(
                     data=f"{prefix}_prev({modulo_page})_command_{category_plugins}_{category_pgno}",
                 ),
                 Button.inline(
-                    "⬅️ Back ",
+                    "⬅️ Voltar ",
                     data=f"back_plugin_{category_plugins}_{category_pgno}",
                 ),
                 Button.inline(
@@ -200,7 +200,7 @@ def paginate_help(
         pairs = pairs + [
             (
                 Button.inline(
-                    "⬅️ Back ",
+                    "⬅️ Voltar ",
                     data=f"back_plugin_{category_plugins}_{category_pgno}",
                 ),
             )
@@ -229,7 +229,7 @@ async def inline_handler(event):  # sourcery no-metrics
             buttons = [
                 (
                     Button.inline("Stats", data="stats"),
-                    Button.url("Repo", "https://github.com/Jisan09/catuserbot"),
+                    Button.url("Repo", "https://github.com/AGMODDER/catuserbot"),
                 )
             ]
             ALIVE_PIC = gvarstatus("ALIVE_PIC")
@@ -335,10 +335,10 @@ async def inline_handler(event):  # sourcery no-metrics
             timestamp = int(time.time() * 2)
             newtroll = {str(timestamp): {"userid": u, "text": txct}}
 
-            buttons = [Button.inline("show message 🔐", data=f"troll_{timestamp}")]
+            buttons = [Button.inline("Mostrar Mensagem🔐", data=f"troll_{timestamp}")]
             result = builder.article(
                 title="Troll Message",
-                text=f"Only {sandy} cannot access this message!",
+                text=f"Apenas {sandy} não pode acessar esta mensagem!",
                 buttons=buttons,
             )
             await event.answer([result] if result else None)
@@ -388,7 +388,7 @@ async def inline_handler(event):  # sourcery no-metrics
             buttons = [Button.inline("show message 🔐", data=f"secret_{timestamp}")]
             result = builder.article(
                 title="secret message",
-                text=f"🔒 A whisper message to {sandy}, Only he/she can open it.",
+                text=f"🔒 Uma mensagem sussurrada para {sandy}, só ele / ela pode abri-lo. ",
                 buttons=buttons,
             )
             await event.answer([result] if result else None)
@@ -410,7 +410,7 @@ async def inline_handler(event):  # sourcery no-metrics
 
             buttons = [Button.inline("Read Message ", data=f"hide_{timestamp}")]
             result = builder.article(
-                title="Hidden Message",
+                title="Mensagem escondida",
                 text=f"✖✖✖",
                 buttons=buttons,
             )
@@ -423,8 +423,8 @@ async def inline_handler(event):  # sourcery no-metrics
         elif string == "help":
             _result = main_menu()
             result = builder.article(
-                title="© CatUserbot Help",
-                description="Help menu for CatUserbot",
+                title="© Ajuda do CatUserbot",
+                description="Menu de Ajuda do CatUserbot",
                 text=_result[0],
                 buttons=_result[1],
                 link_preview=False,
@@ -448,7 +448,7 @@ async def inline_handler(event):  # sourcery no-metrics
                             data=f"ytdl_next_{key_}_1",
                         ),
                         Button.inline(
-                            "📜  List all",
+                            "📜  Listar tudo",
                             data=f"ytdl_listall_{key_}_1",
                         ),
                         Button.inline(
@@ -473,7 +473,7 @@ async def inline_handler(event):  # sourcery no-metrics
                     id=str(uuid4()),
                     type="photo",
                     title=link,
-                    description="⬇️ Click to Download",
+                    description="⬇️ Clique para Download",
                     thumb=photo,
                     content=photo,
                     send_message=types.InputBotInlineMessageMediaAuto(
@@ -482,9 +482,9 @@ async def inline_handler(event):  # sourcery no-metrics
                 )
             else:
                 result = builder.article(
-                    title="Not Found",
-                    text=f"No Results found for `{str_y[1]}`",
-                    description="INVALID",
+                    title="Não encontrado",
+                    text=f"Nenhum resultado encontrado para `{str_y[1]}`",
+                    description="INVÁLIDO",
                 )
             try:
                 await event.answer([result] if result else None)
@@ -500,8 +500,8 @@ async def inline_handler(event):  # sourcery no-metrics
                 )
         elif string == "age_verification_alert":
             buttons = [
-                Button.inline(text="Yes I'm 18+", data="age_verification_true"),
-                Button.inline(text="No I'm Not", data="age_verification_false"),
+                Button.inline(text="Sim, tenho mais de 18 anos", data="age_verification_true"),
+                Button.inline(text="Não, eu não tenho", data="age_verification_false"),
             ]
             markup = event.client.build_reply_markup(buttons)
             photo = types.InputWebDocument(
@@ -511,7 +511,7 @@ async def inline_handler(event):  # sourcery no-metrics
                 attributes=[],
             )
             text, msg_entities = await event.client._parse_message_text(
-                "<b>ARE YOU OLD ENOUGH FOR THIS ?</b>", "html"
+                "<b>VOCÊ ESTÁ VELHO O SUFICIENTE PARA ISSO?</b>", "html"
             )
             result = types.InputBotInlineResult(
                 id=str(uuid4()),
@@ -526,7 +526,7 @@ async def inline_handler(event):  # sourcery no-metrics
             await event.answer([result] if result else None)
         elif string == "pmpermit":
             buttons = [
-                Button.inline(text="Show Options.", data="show_pmpermit_options"),
+                Button.inline(text="Mostrar opções.", data="show_pmpermit_options"),
             ]
             PM_PIC = gvarstatus("PM_PIC")
             if PM_PIC:
@@ -593,18 +593,18 @@ async def inline_handler(event):  # sourcery no-metrics
 @check_owner
 async def on_plug_in_callback_query_handler(event):
     buttons = [
-        (Button.inline("Open Menu", data="mainmenu"),),
+        (Button.inline("Abrir Menu", data="mainmenu"),),
     ]
-    await event.edit("Menu Closed", buttons=buttons)
+    await event.edit("Menu Fechado", buttons=buttons)
 
 
 @catub.tgbot.on(CallbackQuery(data=re.compile(b"check")))
 async def on_plugin_callback_query_handler(event):
-    text = f"𝙿𝚕𝚞𝚐𝚒𝚗𝚜: {len(PLG_INFO)}\
+    text = f"Plugins: {len(PLG_INFO)}\
         \n𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜: {len(CMD_INFO)}\
-        \n\n{tr}𝚑𝚎𝚕𝚙 <𝚙𝚕𝚞𝚐𝚒𝚗> : 𝙵𝚘𝚛 𝚜𝚙𝚎𝚌𝚒𝚏𝚒𝚌 𝚙𝚕𝚞𝚐𝚒𝚗 𝚒𝚗𝚏𝚘.\
-        \n{tr}𝚑𝚎𝚕𝚙 -𝚌 <𝚌𝚘𝚖𝚖𝚊𝚗𝚍> : 𝙵𝚘𝚛 𝚊𝚗𝚢 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 𝚒𝚗𝚏𝚘.\
-        \n{tr}𝚜 <𝚚𝚞𝚎𝚛𝚢> : 𝚃𝚘 𝚜𝚎𝚊𝚛𝚌𝚑 𝚊𝚗𝚢 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜.\
+        \n\n{tr}help <plugin> : Para a informação de um plugin específico.\
+        \n{tr}help -c <comando> : Para a informação de qualquer plugin.\
+        \n{tr}s <comando> : Para pesquisar qualquer comando.\
         "
     await event.answer(text, cache_time=0, alert=True)
 
@@ -614,9 +614,9 @@ async def on_plugin_callback_query_handler(event):
 async def on_plug_in_callback_query_handler(event):
     category = str(event.pattern_match.group(1).decode("UTF-8"))
     buttons = paginate_help(0, GRP_INFO[category], category)
-    text = f"**Category: **{category}\
-        \n**Total plugins :** {len(GRP_INFO[category])}\
-        \n**Total Commands:** {command_in_category(category)}"
+    text = f"**Categoria: **{category}\
+        \n**Plugins totais :** {len(GRP_INFO[category])}\
+        \n**Comandos totais:** {command_in_category(category)}"
     await event.edit(text, buttons=buttons)
 
 
@@ -632,7 +632,7 @@ async def on_plug_in_callback_query_handler(event):
     pgno = int(event.pattern_match.group(3).decode("UTF-8"))
     if mtype == "plugin":
         buttons = paginate_help(pgno, GRP_INFO[category], category)
-        text = f"**Category: **`{category}`\
+        text = f"**Categoria: **`{category}`\
             \n**Total plugins :** __{len(GRP_INFO[category])}__\
             \n**Total Commands:** __{command_in_category(category)}__"
     else:
@@ -733,14 +733,14 @@ async def on_plug_in_callback_query_handler(event):
     buttons = [
         (
             Button.inline(
-                "⬅️ Back ",
+                "⬅️ Voltar ",
                 data=f"back_command_{category}_{pgno}_{category_plugins}_{category_pgno}",
             ),
-            Button.inline("⚙️ Main Menu", data="mainmenu"),
+            Button.inline("⚙️ Menu Principal", data="mainmenu"),
         )
     ]
-    text = f"**Command :** `{tr}{cmd}`\
+    text = f"**Comando :** `{tr}{cmd}`\
         \n**Plugin :** `{category}`\
-        \n**Category :** `{category_plugins}`\
-        \n\n**✘ Intro :**\n{CMD_INFO[cmd][0]}"
+        \n**Categoria :** `{category_plugins}`\
+        \n\n**✘ Introdução :**\n{CMD_INFO[cmd][0]}"
     await event.edit(text, buttons=buttons)
