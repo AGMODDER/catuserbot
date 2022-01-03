@@ -128,11 +128,11 @@ async def amireallyalive(event):
     reply_to_id = await reply_id(event)
     EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
 
-    cat_caption = "**Catuserbot is Up and Running**\n"
-    cat_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
-    cat_caption += f"**{EMOJI} Catuserbot Version :** `{catversion}`\n"
-    cat_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
-    cat_caption += f"**{EMOJI} Master:** {mention}\n"
+    cat_caption = "**ᴏʟᴀ́ ᴍᴇsᴛʀᴇ, ᴄᴀᴛ ɪs ᴀʟɪᴠᴇ**\n"
+    cat_caption += f"**⚙️ ᴠᴇʀsᴀ̃ᴏ ᴅᴏ ᴛᴇʟᴇᴛʜᴏɴ:**__v{version.__version__}__\n`"
+    cat_caption += f"🐈 **ᴠᴇʀsᴀ̃ᴏ ᴅᴏ ᴄᴀᴛ:**__v{catversion}__\n"
+    cat_caption += f"🐍 **ᴠᴇʀsᴀ̃ᴏ ᴅᴏ ᴘʏᴛʜᴏɴ:** `{python_version()}\n`"
+    cat_caption += f"👑 **ᴍᴇᴜ ᴅᴏɴᴏ:** __{mention}__"
     results = await event.client.inline_query(Config.TG_BOT_USERNAME, cat_caption)
     await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
     await event.delete()
