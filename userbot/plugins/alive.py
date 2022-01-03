@@ -23,13 +23,31 @@ from . import mention
 
 plugin_category = "utils"
 
+ANIME_QUOTE = [
+    "ʟᴇᴍʙʀᴇ-sᴇ ᴅᴀ ʟɪᴄ̧ᴀ̃ᴏ ᴇ ɴᴀ̃ᴏ ᴅᴀ ᴅᴇᴄᴇᴘᴄ̧ᴀ̃ᴏ.",
+    "ᴠᴏᴄᴇ̂ ɴᴀ̃ᴏ ᴄᴏɴʜᴇᴄᴇ ᴀs ᴘᴇssᴏᴀs, ᴠᴏᴄᴇ̂ ᴄᴏɴʜᴇᴄᴇ ᴀᴘᴇɴᴀs ᴏ ϙᴜᴇ ᴇʟᴀs ᴘᴇʀᴍɪᴛᴇᴍ ϙᴜᴇ ᴠᴏᴄᴇ̂ ᴠᴇᴊᴀ.",
+    "ᴀs ᴠᴇᴢᴇs ᴀs ϙᴜᴇsᴛᴏ̃ᴇs sᴀ̃ᴏ ᴄᴏᴍᴘʟɪᴄᴀᴅᴀs ᴇ ᴀs ʀᴇsᴘᴏsᴛᴀs sᴀ̃ᴏ sɪᴍᴘʟᴇs.",
+    "ᴀᴍᴀʀ ᴀʟɢᴜᴇ́ᴍ ᴘʀᴏғᴜɴᴅᴀᴍᴇɴᴛᴇ ʟʜᴇ ᴅᴀ ғᴏʀᴄ̧ᴀ: sᴇʀ ᴀᴍᴀᴅᴏ ᴘʀᴏғᴜɴᴅᴀᴍᴇɴᴛᴇ ʟʜᴇ ᴅᴀ ᴄᴏʀᴀɢᴇᴍ.",
+    "ᴠᴏᴄᴇ̂ ɴᴀ̃ᴏ ᴇ́ ᴅᴇʀʀᴏᴛᴀᴅᴏ ϙᴜᴀɴᴅᴏ ᴘᴇʀᴅᴇ, ᴍᴀs sɪᴍ ϙᴜᴀɴᴅᴏ ᴠᴏᴄᴇ̂ ᴅᴇsɪsᴛᴇ.",
+    "ʜᴀ́ ᴍᴏᴍᴇɴᴛᴏs ϙᴜᴇ ᴠᴏᴄᴇ̂ ᴘʀᴇᴄɪsᴀ ᴅᴇsɪsᴛɪʀ ᴅᴇ ᴀʟɢᴜᴍᴀ ᴄᴏɪsᴀ ᴘᴀʀᴀ ᴘʀᴇsᴇʀᴠᴀʀ ᴀ ᴏᴜᴛʀᴀ.",
+    "ᴀ ᴠɪᴅᴀ ᴅᴀs ᴘᴇssᴏᴀs ɴᴀ̃ᴏ ᴀᴄᴀʙᴀ ϙᴜᴀɴᴅᴏ ᴇʟᴀs ᴍᴏʀʀᴇᴍ, ᴍᴀs sɪᴍ ϙᴜᴀɴᴅᴏ ᴘᴇʀᴅᴇᴍ ᴀ ғᴇ́‌.",
+    "sᴇ ᴠᴏᴄᴇ̂ ᴇsᴛᴀ́ ᴠɪᴠᴏ ᴘᴏᴅᴇ ʀᴇᴄᴏᴍᴇᴄ̧ᴀʀ. ɴɪɴɢᴜᴇ́ᴍ ᴛᴇᴍ ᴏ ᴅɪʀᴇɪᴛᴏ ᴅᴇ ᴛᴇ ᴛɪʀᴀʀ ɪssᴏ.",
+    "ᴏ ᴘᴇssɪᴍɪsᴍᴏ, ᴅᴇᴘᴏɪs ᴅᴇ ᴠᴏᴄᴇ̂ sᴇ ᴀᴄᴏsᴛᴜᴍᴀʀ ᴄᴏᴍ ᴇʟᴇ, ᴇ́ ᴛᴀ̃ᴏ ᴀɢʀᴀᴅᴀ́ᴠᴇʟ ϙᴜᴀɴᴛᴏ ᴏ ᴏᴛɪᴍɪsᴍᴏ.",
+    "ᴘᴇʀᴅᴏᴀʀ ᴇ́ ʟɪʙᴇʀᴛᴀʀ ᴏ ᴘʀɪsɪᴏɴᴇɪʀᴏ... ᴇ ᴅᴇsᴄᴏʙʀɪʀ ϙᴜᴇ ᴏ ᴘʀɪsɪᴏɴᴇɪʀᴏ ᴇʀᴀ ᴠᴏᴄᴇ̂.",
+    "ᴛᴜᴅᴏ ᴏ ϙᴜᴇ ᴜᴍ sᴏɴʜᴏ ᴘʀᴇᴄɪsᴀ ᴇ́ ᴀʟɢᴜᴇ́ᴍ ϙᴜᴇ ᴀᴄʀᴇᴅɪᴛᴇ ϙᴜᴇ ᴇʟᴇ ᴘᴏssᴀ sᴇʀ ʀᴇᴀʟɪᴢᴀᴅᴏ.",
+    "ɴᴀ̃ᴏ ᴇsᴘᴇʀᴇ ᴘᴏʀ ᴜᴍᴀ ᴄʀɪsᴇ ᴘᴀʀᴀ ᴅᴇsᴄᴏʙʀɪʀ ᴏ ϙᴜᴇ ᴇ́ ɪᴍᴘᴏʀᴛᴀɴᴛᴇ ᴇᴍ sᴜᴀ ᴠɪᴅᴀ.",
+    "ᴅᴇsᴄᴏʙʀɪʀ ᴄᴏɴsɪsᴛᴇ ᴇᴍ ᴏʟʜᴀʀ ᴘᴀʀᴀ ᴏ ϙᴜᴇ ᴏ ᴍᴜɴᴅᴏ ᴇsᴛᴀ́ ᴠᴇɴᴅᴏ ᴇ ᴘᴇɴsᴀʀ ᴜᴍᴀ ᴄᴏɪsᴀ ᴅɪғᴇʀᴇɴᴛᴇ.",
+    "ɴᴏ ғᴜɴᴅᴏ ᴅᴇ ᴜᴍ ʙᴜʀᴀᴄᴏ ᴏᴜ ᴅᴇ ᴜᴍ ᴘᴏᴄ̧ᴏ, ᴀᴄᴏɴᴛᴇᴄᴇ ᴀ ᴅᴇsᴄᴏʙᴇʀᴛᴀ ᴅᴀs ᴇsᴛʀᴇʟᴀs.",
+]
+plugin_category = "utils"
+
 
 @catub.cat_cmd(
     pattern="alive$",
     command=("alive", plugin_category),
     info={
-        "header": "To check bot's alive status",
-        "options": "To show media in this cmd you need to set ALIVE_PIC with media link, get this by replying the media by .tgm",
+        "header": "Para o ver se o bot está ativo",
+        "options": "Para mostrar mídia neste comando, você precisa definir ALIVE_PIC com link de mídia, obtenha isso respondendo à mídia por .tgm",
         "usage": [
             "{tr}alive",
         ],
@@ -37,20 +55,19 @@ plugin_category = "utils"
 )
 async def amireallyalive(event):
     "A kind of showing bot details"
+    ANIME = f"{random.choice(ANIME_QUOTE)}"
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    catevent = await edit_or_reply(event, "`Checking...`")
+    catevent = await edit_or_reply(event, "`Checando...`")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "✧✧"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**✮ MY BOT IS RUNNING SUCCESSFULLY ✮**"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or ANIME
     CAT_IMG = gvarstatus("ALIVE_PIC")
     cat_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = cat_caption.format(
         ALIVE_TEXT=ALIVE_TEXT,
-        EMOJI=EMOJI,
         mention=mention,
         uptime=uptime,
         telever=version.__version__,
@@ -70,7 +87,7 @@ async def amireallyalive(event):
         except (WebpageMediaEmptyError, MediaEmptyError, WebpageCurlFailedError):
             return await edit_or_reply(
                 catevent,
-                f"**Media Value Error!!**\n__Change the link by __`.setdv`\n\n**__Can't get media from this link :-**__ `{PIC}`",
+                f"**Erro de valor de mídia!!**\n__Altere o link por __`.setdv`\n\n**__Não é possível obter mídia deste link :-**__ `{PIC}`",
             )
     else:
         await edit_or_reply(
@@ -79,14 +96,21 @@ async def amireallyalive(event):
         )
 
 
-temp = """{ALIVE_TEXT}
-**{EMOJI} Master:** {mention}
-**{EMOJI} Uptime :** `{uptime}`
-**{EMOJI} Telethon Version :** `{telever}`
-**{EMOJI} Catuserbot Version :** `{catver}`
-**{EMOJI} Python Version :** `{pyver}`
-**{EMOJI} Database :** `{dbhealth}`"""
+temp = """ᴏʟᴀ́ ᴍᴇsᴛʀᴇ, ᴄᴀᴛ ɪs ᴀʟɪᴠᴇ
 
+**{ALIVE_TEXT}**
+
+┏━━━━━━━━━━━━━━━━┓
+👑 **ᴍᴇᴜ ᴅᴏɴᴏ:** __{mention}__
+🐍 **ᴠᴇʀsᴀ̃ᴏ ᴅᴏ ᴘʏᴛʜᴏɴ:** __ᴠ{pyver}__
+⚙️ **ᴠᴇʀsᴀ̃ᴏ ᴅᴏ ᴛᴇʟᴇᴛʜᴏɴ:** __ᴠ{telever}__
+🐈 **ᴠᴇʀsᴀ̃ᴏ ᴅᴏ ᴄᴀᴛ**: __ᴠ{catver}__
+💻 **ғᴜɴᴄɪᴏɴᴀᴍᴇɴᴛᴏ ᴅᴀ ᴅᴀᴛᴀʙᴀsᴇ:** __{dbhealth}__
+⏰ **ᴛᴇᴍᴘᴏ ᴀᴛɪᴠᴏ:** __{uptime}__
+┗━━━━━━━━━━━━━━━━┛
+┏━━━━━━━━━━━━━━━━┓
+🏓 **ᴘɪɴɢ:** __{ping}ms__
+┗━━━━━━━━━━━━━━━━┛"""
 
 @catub.cat_cmd(
     pattern="ialive$",
