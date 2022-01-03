@@ -36,14 +36,14 @@ def check_data_base_heal_th():
         output = f"❌ {e}"
         is_database_working = False
     else:
-        output = "Functioning"
+        output = "Funcionando."
         is_database_working = True
     return is_database_working, output
 
 
 async def catalive(StartTime):
     _, check_sgnirts = check_data_base_heal_th()
-    sudo = "Enabled" if Config.SUDO_USERS else "Disabled"
+    sudo = "Ligado" if Config.SUDO_USERS else "Desligado"
     uptime = await get_readable_time((time.time() - StartTime))
     try:
         useragent = (
@@ -83,9 +83,9 @@ async def catalive(StartTime):
         dyno = f"{AppHours}h {AppMinutes}m/{hours}h {minutes}m"
     except Exception as e:
         dyno = e
-    return f"🖤༄ Catuserbot Stats ༄🖤\
-                 \n\nღ Database : {check_sgnirts}\
+    return f"🖤༄ Cat Stats ༄🖤\
+                 \n\nღ Funcionamento da Database : {check_sgnirts}\
                   \nღ Sudo : {sudo}\
-                  \nღ Uptime : {uptime}\
+                  \nღ Tempo Ativo : {uptime}\
                   \nღ Dyno : {dyno}\
                   "
