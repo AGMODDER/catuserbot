@@ -96,7 +96,7 @@ async def amireallyalive(event):
         )
 
 
-temp = """ᴏʟᴀ́ ᴍᴇsᴛʀᴇ, ᴄᴀᴛ ɪs ᴀʟɪᴠᴇ
+temp = """**ᴏʟᴀ́ ᴍᴇsᴛʀᴇ, ᴄᴀᴛ ɪs ᴀʟɪᴠᴇ**
 
 **{ALIVE_TEXT}**
 
